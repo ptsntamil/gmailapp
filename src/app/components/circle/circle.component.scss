@@ -1,0 +1,11 @@
+.circle {
+  display: flex;
+  & img {
+    width: 16px;
+    margin-right: 10px; 
+  }
+  & span {
+    flex: 1;
+    text-transform: capitalize;
+  }
+}

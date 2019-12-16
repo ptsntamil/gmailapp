@@ -1,0 +1,13 @@
+.actions {
+  background-color: #F7F7F7;
+  padding: 15px 30px;
+  display: flex;
+  & > img {
+    width: 16px;
+    margin-left: 10px;
+    &:first-child {
+      width: 10px;
+      margin-left: 3px;
+    }
+  }
+}

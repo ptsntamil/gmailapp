@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+$clr-gray: #FCFBFC;
+$clr-white: #fff;
+$clr-black: #000;
+$clr-sh-gray: #dedddd;
+$icon-width: 25px;
+$font-style: 'Open Sans', sans-serif;
+$font-size: 13px;
+$clr-primary: #4E8DF8;
+$font-color: #CECECE;
+$bg-gray: #F7F7F7;
+
+body {
+  box-sizing: border-box;
+  background-color: $clr-white;
+  font-family: $font-style;
+  font-size: $font-size;
+  color: $font-color;
+}
+/********HEADER********/
+header {
+  background-color: $clr-gray;
+  padding: 15px 30px;
+  box-shadow: 1px 1px 1px $clr-sh-gray;
+  
+  & .search {
+    & input {
+      box-shadow: 0 1px 3px 0 rgba(21, 25, 29, 0.28);
+      border-color: rgba(223, 225, 229, 0);
+      border-radius: 2px;
+      padding: 5px 47px 5px 10px;
+      width: 100%;
+    }
+    & .search-icon {
+      position: absolute;
+      width: 20px;
+      top: 6px;
+      right: 15px;
+    }
+  }
+  & .logo {
+    width: 25px;
+  }
+  & .user.icon {
+    border-radius: 50%;
+  }
+  & .icon:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+/********HEADER********/
+
+.icon {
+  width: $icon-width;
+}
+main {
+  & nav {
+    height: calc(100vh - 82px);
+    border-right: 1px solid $clr-sh-gray;
+
+    & .compose {
+      text-transform: uppercase;
+      padding: 30px 30px;
+      & button {
+        width: 100%;
+        border-radius: 1px;  
+      }
+    }
+  }
+}
+.folders {
+  font-size: 15px;
+  .folder {
+    padding: 5px 30px;
+    &.active {
+      font-weight: 600;
+      color: $clr-black;
+    }
+    &:hover {
+      background-color: $clr-gray;
+      color: $clr-primary;
+    }
+    & div {
+      text-transform: capitalize;
+      &:first-child {
+        flex: 1;
+      }
+      &:last-child {
+        width: 30px;
+        text-align: right;
+        font-weight: 600;
+      }
+    }
+  }
+}
+.circles {
+  padding: 10px 0px;
+  & div {
+    padding: 5px 30px;
+  }
+  & > div:first-child {
+    font-weight: 600;
+    color: $clr-black;
+  }
+}
+.row {
+  margin: 0px;
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+  padding: 0px;
+}
+.add {
+  padding: 10px 30px;
+  font-weight: 600;
+  color: $clr-black;
+  & img {
+    width: 16px;
+    margin-right: 10px; 
+  }
+}
+.nav-link.active,
+.nav-item.show .nav-link {
+  border-color: #fff !important;
+}

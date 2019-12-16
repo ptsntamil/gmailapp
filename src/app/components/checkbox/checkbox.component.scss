@@ -1,0 +1,46 @@
+$size: 16px;
+.checkbox {
+  width: 16px;
+  height: 16px;
+  & label {
+    position: absolute;
+    width: $size;
+    height: $size;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 2px;
+    bottom: 0;
+    margin: 0;
+    border: 2px solid #919396;
+    background-color: #F7F7F7;
+  }
+  & svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    stroke: #fff;
+    stroke-linecap: square;
+    stroke-width: 3;
+    fill: none;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: $size;
+    z-index: 2;
+  }
+}
+
+input:checked ~ label {
+  background-color: #919396;
+}
+input:checked ~ label svg {
+  opacity: 1;
+}
